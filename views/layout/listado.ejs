@@ -1,0 +1,64 @@
+<%- include('../partials/header'); %>
+
+<div class="container">
+    <h4>Listado de Datos del Excel</h4>
+    <div class="row">
+        <div class="col-ms-12 col-md-12">
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th>#</th>
+                        <th>GPO</th>
+                        <th>GEN</th>
+                        <th>ESP</th>
+                        <th>DIR</th>
+                        <th>VAR</th>
+                        <th>RFC_PROVEEDOR</th>
+                        <th>LOTE</th>
+                        <th>ESTADO</th>
+                        <th>CSUSPENSIVO</th>
+                        <th>LINEA</th>
+                        <th>LOCALIDAD</th>
+                        <th>CANT_INV</th>
+                        <th>FECHA_CAD</th>
+                        <th>FECHA_FAB</th>
+                        <th>FECHA_REC</th>
+                        <th>NO_ALTA</th>
+                        <th>ESTADO ANTERIOR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% let i=2; %>
+                    <% for (const insumos of datos){%>
+                       
+                        <tr class="text-center">
+                            <td> <%= insumos.CONSECUTIVO %></td>
+                            <td><%=insumos.GPO%></td>
+                            <td><%=insumos.GEN%></td>
+                            <td><%=insumos.ESP%></td>
+                            <td><%=insumos.DIR%></td>
+                            <td><%=insumos.VAR%></td>
+                            <td><%=insumos.RFC_PROVEEDOR%></td>
+                            <td><%=insumos.LOTE%></td>
+                            <td><%=insumos.ESTADO%></td>
+                            <td><%=insumos.CSUSPENSIVO%></td>
+                            <td><%=insumos.LINEA%></td>
+                            <td><%=insumos.LOCALIDAD%></td>
+                            <td><%=insumos.CANT_INV%></td>
+                            <td><%=insumos.FECHA_CAD%></td>
+                            <td><%=insumos.FECHA_FAB%></td>
+                            <td><%=insumos.FECHA_REC%></td>
+                            <td><%=insumos.NO_ALTA%></td>
+                            <td><%=insumos.ESTADO_ANTERIOR%></td>
+                        </tr>
+                    <% }%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<%= JSON.stringify(datos) %>
+
+<%- include('../partials/footer'); %>

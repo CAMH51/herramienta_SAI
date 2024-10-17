@@ -1,0 +1,19 @@
+<%- include('../partials/header'); %>
+
+<div class="container">
+    <h4>Layout Inventarios SAI Almacén</h4>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <form method="POST" action="layout/" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Seleccione el inventario a analizar.</label>
+                    <input class="form-control" type="file" id="file" name="file">
+                </div>
+                <div class="d-grid gap-2 mt-5"><button type="submit" class="btn btn-primary btn-block" >Procesar</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer'); %>
