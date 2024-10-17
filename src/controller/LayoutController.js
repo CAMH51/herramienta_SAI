@@ -108,6 +108,17 @@ function validarRFC(rfc, posicion){
     return rfc;
 }
 
+
+function validarLOTE(lote, posicion){
+    if(lote.length > 20 ){
+        console.log(`Error de la columna LOTE en la Fila ${posicion} valor ${lote}`);
+    }else{
+        
+    }
+
+    return rfc;
+}
+
 function verLayout (req, res){
     res.render("layout/layouts");
 }
